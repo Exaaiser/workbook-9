@@ -11,21 +11,21 @@ import javax.sql.DataSource;
 public class DatabaseConfiguration {
 
     @Value("${datasource.url}")
-    private String dbUrl;
+    private String connectionUrl;
 
     @Value("${datasource.username}")
-    private String dbUsername;
+    private String username;
 
     @Value("${datasource.password}")
-    private String dbPassword;
+    private String password;
 
-    @Bean
+    @Bean(name = "customDataSource")
     public DataSource dataSource() {
-        BasicDataSource ds = new BasicDataSource();
-        ds.setUrl(dbUrl);
-        ds.setUsername(dbUsername);
-        ds.setPassword(dbPassword);
-        ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        return ds;
+        BasicDataSource dataSource = new BasicDataSource();
+        dataSource.setUrl(connectionUrl);
+        dataSource.setUsername(username);
+        dataSource.setPassword(password);
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        return dataSource;
     }
 }

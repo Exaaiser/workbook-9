@@ -1,6 +1,6 @@
 package com.pluralsight.NorthwindTradersSpringBoot.cli.screen;
 
-import com.pluralsight.NorthwindTradersSpringBoot.model.Customer;
+import com.pluralsight.NorthwindTradersSpringBoot.models.Customer;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -12,3 +12,4 @@ public class CustomerListScreen {
         customers.forEach(System.out::println);
     }
 }
+

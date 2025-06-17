@@ -11,11 +11,11 @@ public class NorthwindTradersCLI implements CommandLineRunner {
 
     @Autowired
     public NorthwindTradersCLI(MenuHandler menuHandler) {
-        this.menuHandler = menuHandler;
+       this.menuHandler = menuHandler;
     }
 
     @Override
     public void run(String... args) throws Exception {
-        menuHandler.showMainMenu();
+//        menuHandler.showMainMenu();
     }
 }
