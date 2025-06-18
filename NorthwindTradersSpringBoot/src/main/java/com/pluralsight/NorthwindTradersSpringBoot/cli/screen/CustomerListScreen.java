@@ -1,6 +1,6 @@
 package com.pluralsight.NorthwindTradersSpringBoot.cli.screen;
 
-import com.pluralsight.NorthwindTradersSpringBoot.models.Customer;
+import com.pluralsight.NorthwindTradersSpringBoot.model.Customer;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.pluralsight.NorthwindTradersSpringBoot.dao;
 
-import com.pluralsight.NorthwindTradersSpringBoot.models.Customer;
+import com.pluralsight.NorthwindTradersSpringBoot.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

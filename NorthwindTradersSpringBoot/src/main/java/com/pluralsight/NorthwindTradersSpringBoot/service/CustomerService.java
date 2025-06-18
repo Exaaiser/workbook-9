@@ -1,7 +1,7 @@
 package com.pluralsight.NorthwindTradersSpringBoot.service;
 
 import com.pluralsight.NorthwindTradersSpringBoot.dao.CustomerDAO;
-import com.pluralsight.NorthwindTradersSpringBoot.models.Customer;
+import com.pluralsight.NorthwindTradersSpringBoot.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

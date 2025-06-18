@@ -1,21 +1,26 @@
-// src/main/java/com/pluralsight/NorthwindTradersAPI/controllers/ProductsController.java
 package com.pluralsight.NorthwindTradersSpringBoot.controller;
 
+import com.pluralsight.NorthwindTradersSpringBoot.dao.ProductDAO;
 import com.pluralsight.NorthwindTradersSpringBoot.models.Product;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.Arrays;
-import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/products")
 public class ProductsController {
 
-    @GetMapping
-    public List<Product> getAllProducts() {
-        return Arrays.asList(
-                new Product(1, "Chai", 1, 18.0),
-                new Product(2, "Chang", 1, 19.0)
-        );
+    private final ProductDAO productDao;
+
+    @Autowired
+    public ProductsController(ProductDAO productDao) {
+        this.productDao = productDao;
+    }
+
+    @PostMapping
+    public Product addProduct(@RequestBody Product product) {
+        return productDao.insert(product);
     }
 }

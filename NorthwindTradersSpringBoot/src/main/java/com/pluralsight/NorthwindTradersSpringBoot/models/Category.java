@@ -12,7 +12,7 @@ public class Category {
     }
 
     // Getters & Setters
-    public int getCategoryId() {
+    public Integer getCategoryId() {
         return categoryId;
     }
     public void setCategoryId(int categoryId) {
